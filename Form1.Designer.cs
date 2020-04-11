@@ -30,11 +30,12 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NewGame = new System.Windows.Forms.ToolStripMenuItem();
+            this.Options = new System.Windows.Forms.ToolStripMenuItem();
+            this.Statistics = new System.Windows.Forms.ToolStripMenuItem();
+            this.Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.About = new System.Windows.Forms.ToolStripMenuItem();
             this.Clock = new System.Windows.Forms.PictureBox();
             this.ClockLabel = new System.Windows.Forms.Label();
             this.RemainingMines = new System.Windows.Forms.PictureBox();
@@ -58,43 +59,56 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newGameToolStripMenuItem,
-            this.optionsToolStripMenuItem1,
-            this.statisticsToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.NewGame,
+            this.Options,
+            this.Statistics,
+            this.Exit});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(50, 20);
             this.toolStripMenuItem1.Text = "&Game";
             // 
-            // newGameToolStripMenuItem
+            // NewGame
             // 
-            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.newGameToolStripMenuItem.Text = "&New Game";
+            this.NewGame.Name = "NewGame";
+            this.NewGame.Size = new System.Drawing.Size(180, 22);
+            this.NewGame.Text = "&New Game";
+            this.NewGame.Click += new System.EventHandler(this.Options_Click);
             // 
-            // optionsToolStripMenuItem1
+            // Options
             // 
-            this.optionsToolStripMenuItem1.Name = "optionsToolStripMenuItem1";
-            this.optionsToolStripMenuItem1.Size = new System.Drawing.Size(132, 22);
-            this.optionsToolStripMenuItem1.Text = "&Options";
+            this.Options.Name = "Options";
+            this.Options.Size = new System.Drawing.Size(180, 22);
+            this.Options.Text = "&Options";
+            this.Options.Click += new System.EventHandler(this.Options_Click);
             // 
-            // statisticsToolStripMenuItem
+            // Statistics
             // 
-            this.statisticsToolStripMenuItem.Name = "statisticsToolStripMenuItem";
-            this.statisticsToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.statisticsToolStripMenuItem.Text = "&Statistics";
+            this.Statistics.Name = "Statistics";
+            this.Statistics.Size = new System.Drawing.Size(180, 22);
+            this.Statistics.Text = "&Statistics";
+            this.Statistics.Click += new System.EventHandler(this.Statistics_Click);
             // 
-            // exitToolStripMenuItem
+            // Exit
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.exitToolStripMenuItem.Text = "&Exit";
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(180, 22);
+            this.Exit.Text = "&Exit";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // optionsToolStripMenuItem
             // 
+            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.About});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.optionsToolStripMenuItem.Text = "&Help";
+            // 
+            // About
+            // 
+            this.About.Name = "About";
+            this.About.Size = new System.Drawing.Size(180, 22);
+            this.About.Text = "&About";
+            this.About.Click += new System.EventHandler(this.About_Click);
             // 
             // Clock
             // 
@@ -145,8 +159,8 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Minesweeper";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Clock)).EndInit();
@@ -160,15 +174,16 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem statisticsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem NewGame;
+        private System.Windows.Forms.ToolStripMenuItem Options;
+        private System.Windows.Forms.ToolStripMenuItem Statistics;
+        private System.Windows.Forms.ToolStripMenuItem Exit;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.PictureBox Clock;
         private System.Windows.Forms.Label ClockLabel;
         private System.Windows.Forms.PictureBox RemainingMines;
         private System.Windows.Forms.Label RemainingMinesLabel;
+        private System.Windows.Forms.ToolStripMenuItem About;
     }
 }
 

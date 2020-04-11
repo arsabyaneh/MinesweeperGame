@@ -91,7 +91,7 @@ namespace Minesweeper.Engine
                 _RemainingBombs = value;
 
                 if (old != _RemainingBombs)
-                    this.OnPropertyChanged(new PropertyChangedEventArgs("RemainingBobs"));
+                    this.OnPropertyChanged(new PropertyChangedEventArgs("RemainingBombs"));
             }
         }
 

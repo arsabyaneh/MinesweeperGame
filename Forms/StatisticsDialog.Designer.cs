@@ -107,6 +107,7 @@
             this.Controls.Add(this.DateLabel);
             this.Controls.Add(this.BestTimeLabel);
             this.Controls.Add(this.ListBox);
+            this.MaximizeBox = false;
             this.Name = "StatisticsDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "StatisticsDialog";

@@ -78,9 +78,13 @@ namespace Minesweeper
         {
             switch (e.PropertyName)
             {
-                case "RemaningBombs":
-                    Game.RemainingItems--;
-                    this.RemainingMinesLabel.Text = (Game.RemainingBombs--).ToString();
+                case "RemainingBombs":
+                    this.RemainingMinesLabel.Text = Game.RemainingBombs.ToString();
+                    if(Game.RemainingBombs == 0)
+                    {
+                        Game.RemainingItems++;
+                        Game.RemainingItems--;
+                    }
                     break;
 
                 case "GameOver":

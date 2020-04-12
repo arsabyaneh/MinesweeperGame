@@ -110,6 +110,7 @@
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.GroupBox);
+            this.MaximizeBox = false;
             this.Name = "OptionsDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Game Options";

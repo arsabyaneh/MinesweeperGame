@@ -31,7 +31,7 @@ namespace Minesweeper
             get
             {
                 if (_Current == null)
-                    return LoadFromFile();
+                    _Current = LoadFromFile();
 
                 return _Current;
             }

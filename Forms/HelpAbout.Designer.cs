@@ -75,6 +75,7 @@
             this.Controls.Add(this.Rights);
             this.Controls.Add(this.MinesweeperGame);
             this.Controls.Add(this.Exit);
+            this.MaximizeBox = false;
             this.Name = "HelpAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";

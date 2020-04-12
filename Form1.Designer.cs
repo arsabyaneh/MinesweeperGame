@@ -70,28 +70,28 @@
             // NewGame
             // 
             this.NewGame.Name = "NewGame";
-            this.NewGame.Size = new System.Drawing.Size(180, 22);
+            this.NewGame.Size = new System.Drawing.Size(132, 22);
             this.NewGame.Text = "&New Game";
             this.NewGame.Click += new System.EventHandler(this.Options_Click);
             // 
             // Options
             // 
             this.Options.Name = "Options";
-            this.Options.Size = new System.Drawing.Size(180, 22);
+            this.Options.Size = new System.Drawing.Size(132, 22);
             this.Options.Text = "&Options";
             this.Options.Click += new System.EventHandler(this.Options_Click);
             // 
             // Statistics
             // 
             this.Statistics.Name = "Statistics";
-            this.Statistics.Size = new System.Drawing.Size(180, 22);
+            this.Statistics.Size = new System.Drawing.Size(132, 22);
             this.Statistics.Text = "&Statistics";
             this.Statistics.Click += new System.EventHandler(this.Statistics_Click);
             // 
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(180, 22);
+            this.Exit.Size = new System.Drawing.Size(132, 22);
             this.Exit.Text = "&Exit";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -106,7 +106,7 @@
             // About
             // 
             this.About.Name = "About";
-            this.About.Size = new System.Drawing.Size(180, 22);
+            this.About.Size = new System.Drawing.Size(107, 22);
             this.About.Text = "&About";
             this.About.Click += new System.EventHandler(this.About_Click);
             // 
@@ -158,6 +158,7 @@
             this.Controls.Add(this.Clock);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Minesweeper";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);

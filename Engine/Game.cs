@@ -270,11 +270,10 @@ namespace Minesweeper.Engine
                         m.PerformClick();
                     }
                 }
-
-                if (this.RemainingItems <= 0)
-                    Finished = true;
-
             }
+
+            if (this.RemainingItems <= 0)
+                Finished = true;
         }
     }
 }

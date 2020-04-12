@@ -117,6 +117,7 @@
             this.Controls.Add(this.Time);
             this.Controls.Add(this.TimeLabel);
             this.Controls.Add(this.ResultLabel);
+            this.MaximizeBox = false;
             this.Name = "ResultDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Result";
